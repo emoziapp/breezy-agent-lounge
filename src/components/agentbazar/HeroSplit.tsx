@@ -1,97 +1,121 @@
 import { LoginCard } from "./LoginCard";
-import logo from "@/assets/agentbazar-logo.png";
+import { ShieldCheck, Award, TrendingUp, Headphones } from "lucide-react";
+
+const TRUST_CHIPS = [
+  { icon: Award, strong: "17 Years", label: "of Excellence" },
+  { icon: ShieldCheck, strong: "10K+", label: "Travel Agents" },
+  { icon: TrendingUp, strong: "300+", label: "Sectors" },
+  { icon: Headphones, strong: "24×7", label: "Support" },
+];
 
 export function HeroSplit() {
   return (
-    <section className="relative min-h-screen w-full bg-ab-gradient overflow-hidden font-sans">
-      {/* glow blobs */}
+    <section id="login" className="relative w-full bg-ab-aurora overflow-hidden font-sans">
+      {/* Animated glow blobs */}
       <div
-        className="pointer-events-none absolute -top-32 -right-32 w-[480px] h-[480px] rounded-full blur-[80px] opacity-25"
-        style={{ background: "var(--ab-orange)" }}
+        className="pointer-events-none absolute -top-40 -left-32 w-[520px] h-[520px] rounded-full blur-[100px] opacity-40 animate-ab-blob"
+        style={{ background: "radial-gradient(circle, #ff6600 0%, transparent 70%)" }}
         aria-hidden
       />
       <div
-        className="pointer-events-none absolute -bottom-52 -left-52 w-[600px] h-[600px] rounded-full blur-[80px] opacity-40"
-        style={{ background: "var(--ab-navy-2)" }}
+        className="pointer-events-none absolute top-1/2 -right-40 w-[600px] h-[600px] rounded-full blur-[110px] opacity-50 animate-ab-blob"
+        style={{ background: "radial-gradient(circle, #003a8c 0%, transparent 70%)", animationDelay: "-6s" }}
+        aria-hidden
+      />
+      <div
+        className="pointer-events-none absolute -bottom-32 left-1/3 w-[420px] h-[420px] rounded-full blur-[100px] opacity-30 animate-ab-blob"
+        style={{ background: "radial-gradient(circle, #ff8a3d 0%, transparent 70%)", animationDelay: "-12s" }}
         aria-hidden
       />
 
-      {/* Top bar */}
-      <header className="relative z-10 mx-auto max-w-[1280px] px-6 sm:px-10 pt-6 flex items-center justify-between">
-        <img
-          src={logo}
-          alt="AgentBazar.in"
-          className="h-12 sm:h-14 w-auto bg-white/95 rounded-lg px-3 py-1.5"
+      {/* Animated SVG flight path */}
+      <svg
+        className="pointer-events-none absolute inset-0 w-full h-full opacity-[0.18]"
+        viewBox="0 0 1200 700"
+        preserveAspectRatio="none"
+        aria-hidden
+      >
+        <defs>
+          <linearGradient id="ab-route" x1="0" x2="1">
+            <stop offset="0%" stopColor="#ff6600" />
+            <stop offset="100%" stopColor="#ff8a3d" />
+          </linearGradient>
+        </defs>
+        <path
+          d="M 60 540 Q 350 80 700 320 T 1180 160"
+          fill="none"
+          stroke="url(#ab-route)"
+          strokeWidth="2.5"
+          strokeDasharray="6 8"
+          strokeLinecap="round"
+          className="animate-ab-draw"
         />
-        <nav className="hidden md:flex items-center gap-7 text-sm font-medium text-white/80">
-          <a href="#" className="hover:text-white transition-colors">Home</a>
-          <a href="#" className="hover:text-white transition-colors">Features</a>
-          <a href="#tutorials" className="hover:text-white transition-colors">Tutorials</a>
-          <a href="#" className="hover:text-white transition-colors">Contact</a>
-        </nav>
-      </header>
+      </svg>
 
       {/* Split layout */}
-      <div className="relative z-10 mx-auto max-w-[1280px] px-6 sm:px-10 py-12 sm:py-16 grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-12 items-center">
+      <div className="relative z-10 mx-auto max-w-[1280px] px-5 sm:px-8 py-12 sm:py-20 grid lg:grid-cols-[1.15fr_0.85fr] gap-10 lg:gap-14 items-center">
         {/* LEFT */}
-        <div className="text-white animate-ab-fade-up order-2 lg:order-1 text-center lg:text-left">
-          <span className="inline-block text-[11px] tracking-[0.2em] uppercase font-bold text-[var(--ab-orange)] px-3.5 py-1.5 rounded-full bg-orange-500/12 border border-orange-500/30 mb-5">
-            B2B Airfare Marketplace
+        <div className="text-white order-2 lg:order-1 text-center lg:text-left">
+          <span className="inline-flex items-center gap-2 text-[11px] tracking-[0.22em] uppercase font-bold text-[var(--ab-orange)] px-3.5 py-1.5 rounded-full bg-orange-500/12 border border-orange-500/30 mb-6 animate-ab-fade-up">
+            <span className="w-1.5 h-1.5 rounded-full bg-[var(--ab-orange)] animate-ab-pulse-dot" />
+            India's #1 B2B Flight Marketplace · Since 2008
           </span>
 
-          <h1 className="font-display font-extrabold tracking-tight leading-[1.05] text-[clamp(36px,4.5vw,56px)] mb-5">
-            India's Most Powerful{" "}
-            <span className="text-ab-accent">B2B Airfare</span>{" "}
-            Marketplace
+          <h1 className="font-display font-extrabold tracking-tight leading-[1.02] text-[clamp(36px,5.2vw,64px)] mb-6 animate-ab-fade-up">
+            Flight Tickets &{" "}
+            <span className="text-ab-accent">Series Fixed</span>{" "}
+            Departures —{" "}
+            <span className="relative inline-block">
+              built for agents
+              <svg className="absolute -bottom-2 left-0 w-full" viewBox="0 0 200 8" preserveAspectRatio="none" aria-hidden>
+                <path d="M2 5 Q 50 0 100 4 T 198 3" stroke="#ff6600" strokeWidth="3" fill="none" strokeLinecap="round" />
+              </svg>
+            </span>
           </h1>
 
-          <p className="text-[17px] sm:text-lg leading-relaxed text-white/80 max-w-[560px] lg:max-w-none mb-8 mx-auto lg:mx-0">
-            Zero-markup fares across 300+ sectors with real-time booking tools
-            built for travel agents and consolidators.
+          <p className="text-[17px] sm:text-[18px] leading-relaxed text-white/80 max-w-[600px] mb-8 mx-auto lg:mx-0 animate-ab-fade-up-delay">
+            17 years of trust. Exclusive series-fare inventory across 300+ sectors with
+            live block, instant ticketing, and zero hidden markup — purpose-built for
+            travel agents and consolidators.
           </p>
 
-          {/* Trust badges */}
-          <div className="grid grid-cols-3 gap-3 mb-7 max-w-[560px] mx-auto lg:mx-0">
-            {[
-              { strong: "10,000+", label: "Travel Agents" },
-              { strong: "300+", label: "Routes" },
-              { strong: "Real-Time", label: "Inventory" },
-            ].map((b) => (
-              <div
-                key={b.label}
-                className="flex flex-col p-4 rounded-xl bg-white/[0.07] border border-white/12 backdrop-blur-md transition-all hover:-translate-y-0.5 hover:bg-white/10"
-              >
-                <strong className="font-display text-[22px] font-bold text-[var(--ab-orange)] mb-1 leading-none">
-                  {b.strong}
-                </strong>
-                <span className="text-[13px] text-white/70 font-medium">
-                  {b.label}
-                </span>
-              </div>
-            ))}
-          </div>
-
-          {/* Feature chips */}
-          <div className="flex flex-wrap gap-2.5 mb-7 justify-center lg:justify-start">
-            {["✈ Domestic & International", "⚡ Instant Booking", "💼 Group Fares"].map(
-              (c) => (
-                <span
-                  key={c}
-                  className="text-[13px] px-3.5 py-2 rounded-full bg-white/8 border border-white/15 text-white font-medium"
+          {/* Trust chips */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8 max-w-[640px] mx-auto lg:mx-0">
+            {TRUST_CHIPS.map((b, i) => {
+              const Icon = b.icon;
+              return (
+                <div
+                  key={b.label}
+                  className="flex flex-col items-start p-3.5 rounded-xl bg-white/[0.06] border border-white/12 backdrop-blur-md transition-all hover:-translate-y-1 hover:bg-white/[0.10] hover:border-[var(--ab-orange)]/40 animate-ab-fade-up"
+                  style={{ animationDelay: `${0.15 + i * 0.07}s` }}
                 >
-                  {c}
-                </span>
-              ),
-            )}
+                  <Icon className="text-[var(--ab-orange)] mb-2" size={18} />
+                  <strong className="font-display text-[20px] font-extrabold text-white leading-none">
+                    {b.strong}
+                  </strong>
+                  <span className="text-[12px] text-white/65 font-medium mt-1">
+                    {b.label}
+                  </span>
+                </div>
+              );
+            })}
           </div>
 
-          <p className="text-sm text-white/60">
-            🔒 Trusted by 10,000+ travel agents across India
-          </p>
+          <div className="flex flex-wrap items-center gap-3 justify-center lg:justify-start">
+            <a href="#flagship" className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-gradient-to-br from-[var(--ab-orange)] to-[var(--ab-orange-dark)] text-white font-bold text-[14px] shadow-ab-glow hover:shadow-ab-glow-lg hover:-translate-y-0.5 transition-all">
+              See Today's Series Deals →
+            </a>
+            <a href="#why" className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-white/8 border border-white/20 text-white font-bold text-[14px] hover:bg-white/15 transition-all backdrop-blur-md">
+              Why AgentBazar
+            </a>
+          </div>
         </div>
 
-        {/* RIGHT */}
-        <div className="flex justify-center order-1 lg:order-2">
+        {/* RIGHT — Login */}
+        <div className="flex justify-center order-1 lg:order-2 relative">
+          {/* Card glow */}
+          <div className="absolute inset-0 -z-0 blur-3xl opacity-40 rounded-3xl"
+               style={{ background: "radial-gradient(circle at 50% 30%, #ff6600 0%, transparent 60%)" }} />
           <LoginCard />
         </div>
       </div>

@@ -1,7 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap");
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap");
 
 @custom-variant dark (&:is(.dark *));
 
@@ -188,9 +188,88 @@
   animation: ab-scale-in 0.22s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+/* ===== Aurora / blob backgrounds (Tripgain-style) ===== */
+@utility bg-ab-aurora {
+  background:
+    radial-gradient(800px 500px at 15% 20%, rgba(255,102,0,0.18), transparent 60%),
+    radial-gradient(700px 500px at 85% 80%, rgba(0,58,140,0.35), transparent 60%),
+    radial-gradient(500px 400px at 50% 50%, rgba(255,138,61,0.10), transparent 60%),
+    linear-gradient(135deg, #001233 0%, #001d4a 50%, #002766 100%);
+  background-size: 200% 200%;
+  animation: ab-aurora 28s ease-in-out infinite alternate;
+}
+@utility bg-ab-soft-mint   { background: linear-gradient(180deg, #ffffff 0%, #ecfaf3 100%); }
+@utility bg-ab-soft-peach  { background: linear-gradient(180deg, #ffffff 0%, #fff3eb 100%); }
+@utility bg-ab-soft-cream  { background: linear-gradient(180deg, #fffaf3 0%, #ffffff 100%); }
+
+@keyframes ab-aurora {
+  0%   { background-position: 0% 0%, 100% 100%, 50% 50%, 0% 50%; }
+  100% { background-position: 100% 100%, 0% 0%, 50% 50%, 100% 50%; }
+}
+@keyframes ab-blob {
+  0%, 100% { transform: translate(0,0) scale(1); }
+  33%      { transform: translate(40px,-30px) scale(1.08); }
+  66%      { transform: translate(-30px,30px) scale(0.95); }
+}
+@keyframes ab-marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@keyframes ab-pulse-dot {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(34,197,94,0.55); }
+  50%      { box-shadow: 0 0 0 10px rgba(34,197,94,0); }
+}
+@keyframes ab-draw {
+  to { stroke-dashoffset: 0; }
+}
+@keyframes ab-float {
+  0%,100% { transform: translateY(0) }
+  50%     { transform: translateY(-10px) }
+}
+@keyframes ab-shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-ab-blob       { animation: ab-blob 18s ease-in-out infinite; }
+.animate-ab-marquee    { animation: ab-marquee 32s linear infinite; }
+.animate-ab-pulse-dot  { animation: ab-pulse-dot 1.8s ease-out infinite; }
+.animate-ab-draw       { stroke-dasharray: 1200; stroke-dashoffset: 1200; animation: ab-draw 3.2s ease-out 0.4s forwards; }
+.animate-ab-float      { animation: ab-float 6s ease-in-out infinite; }
+.animate-ab-shimmer    {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  background-size: 200% 100%;
+  animation: ab-shimmer 2.4s linear infinite;
+}
+
+/* Scroll reveal helpers (paired with useInView) */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s cubic-bezier(.22,1,.36,1), transform .8s cubic-bezier(.22,1,.36,1); }
+.reveal.is-in { opacity: 1; transform: translateY(0); }
+.reveal-delay-1.is-in { transition-delay: .08s; }
+.reveal-delay-2.is-in { transition-delay: .16s; }
+.reveal-delay-3.is-in { transition-delay: .24s; }
+.reveal-delay-4.is-in { transition-delay: .32s; }
+.reveal-delay-5.is-in { transition-delay: .40s; }
+
+/* Tilt card */
+.tilt-card { transition: transform .35s cubic-bezier(.22,1,.36,1), box-shadow .35s; transform-style: preserve-3d; }
+.tilt-card:hover { transform: translateY(-6px) rotateX(2deg) rotateY(-2deg); }
+
+/* Browser mock chrome */
+.browser-chrome::before {
+  content: "";
+  position: absolute; top: 10px; left: 14px;
+  width: 10px; height: 10px; border-radius: 50%;
+  background: #ff5f57;
+  box-shadow: 16px 0 0 #febc2e, 32px 0 0 #28c840;
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .bg-ab-gradient, .bg-ab-hero,
-  .animate-ab-fade-up, .animate-ab-fade-up-delay {
+  .bg-ab-gradient, .bg-ab-hero, .bg-ab-aurora,
+  .animate-ab-fade-up, .animate-ab-fade-up-delay,
+  .animate-ab-blob, .animate-ab-marquee, .animate-ab-pulse-dot,
+  .animate-ab-draw, .animate-ab-float, .animate-ab-shimmer {
     animation: none !important;
   }
+  .reveal { opacity: 1; transform: none; }
 }
