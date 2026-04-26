@@ -1,26 +1,36 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { HeroSplit } from "@/components/agentbazar/HeroSplit";
+import { TrustStrip } from "@/components/agentbazar/TrustStrip";
+import { VideoTutorials } from "@/components/agentbazar/VideoTutorials";
+import { Footer } from "@/components/agentbazar/Footer";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "AgentBazar.in — India's B2B Airfare Marketplace" },
+      {
+        name: "description",
+        content:
+          "Zero-markup fares across 300+ sectors. Real-time booking for 10,000+ travel agents. Login to access your dashboard.",
+      },
+      { property: "og:title", content: "AgentBazar.in — B2B Airfare Marketplace" },
+      {
+        property: "og:description",
+        content:
+          "India's most powerful B2B airfare marketplace for travel agents and consolidators.",
+      },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
+function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen">
+      <HeroSplit />
+      <TrustStrip />
+      <VideoTutorials />
+      <Footer />
     </div>
   );
-}
-
-function Index() {
-  return <PlaceholderIndex />;
 }
