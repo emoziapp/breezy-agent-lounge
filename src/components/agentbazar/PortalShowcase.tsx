@@ -1,7 +1,18 @@
 import { useInView } from "@/hooks/useInView";
 import { Search, MousePointerClick, BarChart3, Check } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 
-const FEATURES = [
+type Feature = {
+  icon: LucideIcon;
+  eyebrow: string;
+  title: string;
+  desc: string;
+  bullets: string[];
+  mock: "search" | "booking" | "dashboard";
+  flip?: boolean;
+};
+
+const FEATURES: Feature[] = [
   {
     icon: Search,
     eyebrow: "Smart Search",
@@ -29,7 +40,7 @@ const FEATURES = [
   },
 ];
 
-function Mock({ kind }: { kind: string }) {
+function Mock({ kind }: { kind: Feature["mock"] }) {
   return (
     <div className="relative w-full">
       <div className="relative bg-gradient-to-br from-neutral-100 to-neutral-200 rounded-2xl p-3 shadow-[0_30px_80px_-30px_rgba(0,29,74,0.4)]">
@@ -49,7 +60,7 @@ function Mock({ kind }: { kind: string }) {
                   </div>
                   <div className="h-12 rounded-lg bg-[var(--ab-orange)] grid place-items-center text-white text-[12px] font-bold">Search</div>
                 </div>
-                {[1,2,3].map(i => (
+                {[1, 2, 3].map((i) => (
                   <div key={i} className="flex items-center justify-between p-2.5 rounded-lg border border-neutral-200 hover:border-[var(--ab-orange)] transition-colors">
                     <div className="flex items-center gap-2">
                       <div className="w-7 h-7 rounded-md bg-neutral-100 grid place-items-center text-[10px] font-bold text-[var(--ab-navy)]">6E</div>
@@ -75,7 +86,7 @@ function Mock({ kind }: { kind: string }) {
                   { l: "Date", v: "12 Nov 2026" },
                   { l: "Fare", v: "₹4,890" },
                   { l: "Commission", v: "₹245" },
-                ].map(r => (
+                ].map((r) => (
                   <div key={r.l} className="flex items-center justify-between text-[12px] py-2 border-b border-dashed border-neutral-200">
                     <span className="text-neutral-500 font-medium">{r.l}</span>
                     <span className="font-bold text-[var(--ab-navy)]">{r.v}</span>
@@ -94,7 +105,7 @@ function Mock({ kind }: { kind: string }) {
                     { l: "Today's GMV", v: "₹4.2L" },
                     { l: "Bookings", v: "127" },
                     { l: "Commission", v: "₹18.4K" },
-                  ].map(s => (
+                  ].map((s) => (
                     <div key={s.l} className="p-2 rounded-lg bg-gradient-to-br from-orange-50 to-white border border-orange-100">
                       <div className="text-[9px] text-neutral-500 uppercase font-bold">{s.l}</div>
                       <div className="text-[14px] font-extrabold text-[var(--ab-navy)]">{s.v}</div>
@@ -103,12 +114,12 @@ function Mock({ kind }: { kind: string }) {
                 </div>
                 <div className="h-24 rounded-lg bg-gradient-to-tr from-orange-50 via-orange-100/40 to-transparent relative overflow-hidden">
                   <svg viewBox="0 0 200 80" className="w-full h-full" preserveAspectRatio="none">
-                    <path d="M0 60 Q 30 40 50 50 T 100 30 T 150 38 T 200 12" fill="none" stroke="#ff6600" strokeWidth="2" />
-                    <path d="M0 60 Q 30 40 50 50 T 100 30 T 150 38 T 200 12 L 200 80 L 0 80 Z" fill="url(#g)" opacity="0.3" />
                     <defs><linearGradient id="g" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stopColor="#ff6600" /><stop offset="100%" stopColor="#ff6600" stopOpacity="0" /></linearGradient></defs>
+                    <path d="M0 60 Q 30 40 50 50 T 100 30 T 150 38 T 200 12 L 200 80 L 0 80 Z" fill="url(#g)" opacity="0.3" />
+                    <path d="M0 60 Q 30 40 50 50 T 100 30 T 150 38 T 200 12" fill="none" stroke="#ff6600" strokeWidth="2" />
                   </svg>
                 </div>
-                {["Refund · DEL-BLR · ₹2,340 ✓", "Reissue · BOM-DXB · pending"].map(t => (
+                {["Refund · DEL-BLR · ₹2,340 ✓", "Reissue · BOM-DXB · pending"].map((t) => (
                   <div key={t} className="text-[11px] text-neutral-700 flex items-center gap-2 py-1.5 border-b border-dashed border-neutral-200">
                     <span className="w-1.5 h-1.5 rounded-full bg-[var(--ab-orange)]" /> {t}
                   </div>
@@ -118,9 +129,39 @@ function Mock({ kind }: { kind: string }) {
           </div>
         </div>
       </div>
-      {/* Floating accent badge */}
       <div className="absolute -bottom-4 -right-4 px-3 py-2 rounded-full bg-[var(--ab-navy)] text-white text-[11px] font-bold shadow-xl animate-ab-float">
         ⚡ Real-time
+      </div>
+    </div>
+  );
+}
+
+function FeatureRow({ f }: { f: Feature }) {
+  const view = useInView();
+  const Icon = f.icon;
+  return (
+    <div ref={view.ref} className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+      <div className={`${f.flip ? "lg:order-2" : ""} reveal ${view.inView ? "is-in" : ""}`}>
+        <Mock kind={f.mock} />
+      </div>
+      <div className={`${f.flip ? "lg:order-1" : ""} reveal reveal-delay-2 ${view.inView ? "is-in" : ""}`}>
+        <span className="inline-flex items-center gap-2 text-[11px] tracking-[0.22em] uppercase font-bold text-[var(--ab-orange)] mb-3">
+          <Icon size={14} /> {f.eyebrow}
+        </span>
+        <h3 className="font-display text-[clamp(24px,3vw,34px)] font-extrabold text-[var(--ab-navy)] leading-tight mb-4">
+          {f.title}
+        </h3>
+        <p className="text-[16px] text-neutral-600 leading-relaxed mb-6">{f.desc}</p>
+        <ul className="space-y-2.5">
+          {f.bullets.map((b) => (
+            <li key={b} className="flex items-start gap-2.5 text-[15px] text-neutral-700">
+              <span className="mt-0.5 w-5 h-5 rounded-full bg-[var(--ab-orange)] grid place-items-center flex-shrink-0">
+                <Check className="text-white" size={12} strokeWidth={3} />
+              </span>
+              {b}
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );
@@ -143,40 +184,7 @@ export function PortalShowcase() {
         </div>
 
         <div className="space-y-20 sm:space-y-28">
-          {FEATURES.map((f, i) => {
-            const view = useInView(); // eslint-disable-line react-hooks/rules-of-hooks
-            const Icon = f.icon;
-            return (
-              <div
-                key={f.eyebrow}
-                ref={view.ref}
-                className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center"
-              >
-                <div className={`${f.flip ? "lg:order-2" : ""} reveal ${view.inView ? "is-in" : ""}`}>
-                  <Mock kind={f.mock} />
-                </div>
-                <div className={`${f.flip ? "lg:order-1" : ""} reveal reveal-delay-2 ${view.inView ? "is-in" : ""}`}>
-                  <span className="inline-flex items-center gap-2 text-[11px] tracking-[0.22em] uppercase font-bold text-[var(--ab-orange)] mb-3">
-                    <Icon size={14} /> {f.eyebrow}
-                  </span>
-                  <h3 className="font-display text-[clamp(24px,3vw,34px)] font-extrabold text-[var(--ab-navy)] leading-tight mb-4">
-                    {f.title}
-                  </h3>
-                  <p className="text-[16px] text-neutral-600 leading-relaxed mb-6">{f.desc}</p>
-                  <ul className="space-y-2.5">
-                    {f.bullets.map(b => (
-                      <li key={b} className="flex items-start gap-2.5 text-[15px] text-neutral-700">
-                        <span className="mt-0.5 w-5 h-5 rounded-full bg-[var(--ab-orange)] grid place-items-center flex-shrink-0">
-                          <Check className="text-white" size={12} strokeWidth={3} />
-                        </span>
-                        {b}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            );
-          })}
+          {FEATURES.map((f) => <FeatureRow key={f.eyebrow} f={f} />)}
         </div>
       </div>
     </section>
