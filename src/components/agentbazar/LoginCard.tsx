@@ -129,13 +129,13 @@ export function LoginCard() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-[10px] text-[15px] font-bold tracking-tight text-white bg-gradient-to-br from-[var(--ab-orange)] to-[var(--ab-orange-dark)] shadow-ab-glow transition-all hover:-translate-y-px hover:scale-[1.01] hover:shadow-ab-glow-lg hover:brightness-105 active:scale-[0.99] disabled:opacity-70 disabled:cursor-wait"
+          className="w-full inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-[10px] font-bold tracking-tight text-white bg-gradient-to-br from-[var(--ab-orange)] to-[var(--ab-orange-dark)] shadow-ab-glow transition-all hover:-translate-y-px hover:scale-[1.01] hover:shadow-ab-glow-lg hover:brightness-105 active:scale-[0.99] disabled:opacity-70 disabled:cursor-wait text-lg"
         >
           {isSubmitting ? (
             <Loader2 size={18} className="animate-ab-spin" />
           ) : (
             <>
-              Access Dashboard <ArrowRight size={18} />
+              AgencyLogin <ArrowRight size={18} />
             </>
           )}
         </button>

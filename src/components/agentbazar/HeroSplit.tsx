@@ -61,7 +61,7 @@ export function HeroSplit() {
             India's #1 B2B Flight Marketplace · Since 2008
           </span>
 
-          <h1 className="font-display font-extrabold tracking-tight leading-[1.02] text-[clamp(36px,5.2vw,64px)] mb-6 animate-ab-fade-up">
+          <h1 className="font-display tracking-tight leading-[1.02] text-[clamp(36px,5.2vw,64px)] mb-6 animate-ab-fade-up font-bold">
             Flight Tickets &{" "}
             <span className="text-ab-accent">Series Fixed</span>{" "}
             Departures —{" "}
