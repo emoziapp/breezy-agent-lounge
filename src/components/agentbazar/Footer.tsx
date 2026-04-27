@@ -49,9 +49,9 @@ export function Footer() {
             </div>
 
             <ul className="space-y-2.5 text-[13px]">
-              <li className="flex items-start gap-2.5"><Phone size={14} className="mt-0.5 text-[var(--ab-orange)]" /> +91 99999 99999 (24×7)</li>
-              <li className="flex items-start gap-2.5"><Mail size={14} className="mt-0.5 text-[var(--ab-orange)]" /> support@agentbazar.in</li>
-              <li className="flex items-start gap-2.5"><MapPin size={14} className="mt-0.5 text-[var(--ab-orange)]" /> Mumbai · Delhi · Bengaluru</li>
+              <li className="flex items-start gap-2.5"><Phone size={14} className="mt-0.5 text-[var(--ab-orange)]" /><span>+91 99999 99999 (24×7)</span></li>
+              <li className="flex items-start gap-2.5"><Mail size={14} className="mt-0.5 text-[var(--ab-orange)]" /><span>support@agentbazar.in</span></li>
+              <li className="flex items-start gap-2.5"><MapPin size={14} className="mt-0.5 text-[var(--ab-orange)]" /><span>Mumbai · Delhi · Bengaluru</span></li>
             </ul>
           </div>
 
