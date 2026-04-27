@@ -210,7 +210,7 @@ function AccessibilityPage() {
         link.focus();
         const cs = getComputedStyle(link);
         const outline = cs.outlineStyle !== "none" && parseFloat(cs.outlineWidth) > 0;
-        const ring = cs.boxShadow && cs.boxShadow !== "none";
+        const ring = !!cs.boxShadow && cs.boxShadow !== "none";
         hasFocusRing = outline || ring;
         link.blur();
       }
