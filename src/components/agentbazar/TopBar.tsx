@@ -7,8 +7,8 @@ export function TopBar() {
       <div className="bg-[var(--ab-ink)] text-white/80">
         <div className="max-w-[1280px] mx-auto px-5 sm:px-8 h-9 flex items-center justify-between">
           <div className="flex items-center gap-5">
-            <a href="tel:+919999999999" className="inline-flex items-center gap-1.5 hover:text-[var(--ab-orange)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ab-orange)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ab-ink)] rounded-sm">
-              <Phone size={13} /><span>+91 99999 99999</span>
+            <a href="tel:+919435009519" className="inline-flex items-center gap-1.5 hover:text-[var(--ab-orange)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ab-orange)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ab-ink)] rounded-sm">
+              <Phone size={13} /><span>+91 - 94350-09519</span>
             </a>
             <a href="mailto:support@agentbazar.in" className="hidden sm:inline-flex items-center gap-1.5 hover:text-[var(--ab-orange)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ab-orange)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ab-ink)] rounded-sm">
               <Mail size={13} /><span>support@agentbazar.in</span>
@@ -42,7 +42,7 @@ export function TopBar() {
           </nav>
           <div className="flex items-center gap-2.5">
             <button className="hidden sm:inline-flex items-center gap-1.5 text-[13px] font-bold text-[var(--ab-navy)] px-3.5 py-2 rounded-full border border-neutral-200 hover:border-[var(--ab-orange)] hover:text-[var(--ab-orange)] transition-all">
-              <UserPlus size={14} /> Register
+              <UserPlus size={14} />Register
             </button>
             <a href="#login" className="inline-flex items-center gap-1.5 text-[13px] font-bold text-white px-4 py-2 rounded-full bg-gradient-to-br from-[var(--ab-orange)] to-[var(--ab-orange-dark)] shadow-ab-glow hover:shadow-ab-glow-lg hover:-translate-y-px transition-all">
               <LogIn size={14} /> Sign In
