@@ -135,7 +135,7 @@ export function LoginCard() {
             <Loader2 size={18} className="animate-ab-spin" />
           ) : (
             <>
-              AgencyLogin <ArrowRight size={18} />
+              Agency Login <ArrowRight size={18} />
             </>
           )}
         </button>
