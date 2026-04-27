@@ -1,6 +1,5 @@
 const AIRLINES = [
-  "IndiGo", "Air India", "Vistara", "Akasa Air", "SpiceJet", "GoAir",
-  "Emirates", "Qatar Airways", "Etihad", "Singapore Airlines", "Lufthansa", "Thai Airways",
+  "IndiGo", "Air India", "Air India Express", "Akasa Air", "SpiceJet", "AirAsia", "Fly Dubai",
 ];
 
 export function PartnerMarquee() {
