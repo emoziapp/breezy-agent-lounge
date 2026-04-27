@@ -150,9 +150,9 @@ export function LoginCard() {
         {/* Secondary */}
         <button
           type="button"
-          className="w-full px-5 py-3 rounded-[10px] text-sm font-semibold text-[var(--ab-navy)] border-[1.5px] border-neutral-200 hover:border-[var(--ab-orange)] hover:bg-orange-50/50 transition-all"
+          className="w-full px-5 py-3 rounded-[10px] text-sm text-[var(--ab-navy)] border-[1.5px] border-neutral-200 hover:border-[var(--ab-orange)] hover:bg-orange-50/50 transition-all font-bold"
         >
-          Register a new agency
+          REGISTER  A NEW AGENCY
         </button>
 
         <p className="text-center text-xs text-neutral-500 mt-4 inline-flex items-center justify-center gap-1.5 w-full">
