@@ -7,11 +7,11 @@ export function TopBar() {
       <div className="bg-[var(--ab-ink)] text-white/80">
         <div className="max-w-[1280px] mx-auto px-5 sm:px-8 h-9 flex items-center justify-between">
           <div className="flex items-center gap-5">
-            <a href="tel:+919999999999" className="inline-flex items-center gap-1.5 hover:text-[var(--ab-orange)] transition-colors">
-              <Phone size={13} /> +91 99999 99999
+            <a href="tel:+919999999999" className="inline-flex items-center gap-1.5 hover:text-[var(--ab-orange)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ab-orange)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ab-ink)] rounded-sm">
+              <Phone size={13} /><span>+91 99999 99999</span>
             </a>
-            <a href="mailto:support@agentbazar.in" className="hidden sm:inline-flex items-center gap-1.5 hover:text-[var(--ab-orange)] transition-colors">
-              <Mail size={13} /> support@agentbazar.in
+            <a href="mailto:support@agentbazar.in" className="hidden sm:inline-flex items-center gap-1.5 hover:text-[var(--ab-orange)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ab-orange)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ab-ink)] rounded-sm">
+              <Mail size={13} /><span>support@agentbazar.in</span>
             </a>
           </div>
           <div className="flex items-center gap-4">

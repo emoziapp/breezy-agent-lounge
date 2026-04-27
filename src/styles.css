@@ -264,12 +264,29 @@
   box-shadow: 16px 0 0 #febc2e, 32px 0 0 #28c840;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .bg-ab-gradient, .bg-ab-hero, .bg-ab-aurora,
-  .animate-ab-fade-up, .animate-ab-fade-up-delay,
-  .animate-ab-blob, .animate-ab-marquee, .animate-ab-pulse-dot,
-  .animate-ab-draw, .animate-ab-float, .animate-ab-shimmer {
-    animation: none !important;
+/* ===== Accessible focus ring (keyboard only) ===== */
+@layer base {
+  :where(a, button, [role="button"], input, select, textarea, summary, [tabindex]):focus-visible {
+    outline: 2px solid var(--ab-orange);
+    outline-offset: 2px;
+    border-radius: 6px;
   }
-  .reveal { opacity: 1; transform: none; }
+  :target { scroll-margin-top: 96px; }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    animation-delay: 0ms !important;
+    transition-duration: 0.001ms !important;
+    transition-delay: 0ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal { opacity: 1 !important; transform: none !important; }
+  .tilt-card:hover { transform: none !important; }
+  .animate-ab-draw { stroke-dashoffset: 0 !important; animation: none !important; }
+  .animate-ab-marquee { animation: none !important; transform: none !important; }
+  .bg-ab-gradient, .bg-ab-hero, .bg-ab-aurora { animation: none !important; }
+}
+
