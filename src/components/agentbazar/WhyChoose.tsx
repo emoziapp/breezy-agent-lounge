@@ -14,7 +14,7 @@ const STATS = [
 const FEATURES = [
   { icon: Wallet, title: "Best Series Fares", desc: "Pre-negotiated bulk inventory at fares no other platform can match." },
   { icon: Zap, title: "Instant Ticketing", desc: "Sub-second PNR generation on issuance — no waiting, no manual steps." },
-  { icon: RefreshCw, title: "Instant Refunds", desc: "Browse fixed departures up to 90 days ahead and lock inventory early for group packages." },
+  { icon: RefreshCw, title: "Series Fare Calendar", desc: "Browse fixed departures up to 90 days ahead and lock inventory early for group packages." },
   { icon: MessageSquare, title: "WhatsApp Updates", desc: "Itinerary, reschedules and fare alerts straight to WhatsApp." },
   { icon: LayoutDashboard, title: "Multi-Fare Choice", desc: "Compare 5 major airlines across 300+ sectors in one unified search." },
   { icon: UserCheck, title: "Account Manager", desc: "Consistently priced below every competing series fare portal — agents save up to ₹1.5L/month." },
