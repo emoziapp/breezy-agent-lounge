@@ -50,7 +50,7 @@ export function WhyChoose() {
       <div ref={stats.ref} className="relative bg-ab-aurora overflow-hidden">
         <div className="absolute -top-32 left-1/4 w-[400px] h-[400px] rounded-full blur-[100px] opacity-30 bg-[var(--ab-orange)] animate-ab-blob" aria-hidden />
         <div className="relative max-w-[1280px] mx-auto px-5 sm:px-8 py-16">
-          <div className={`grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-4 reveal ${stats.inView ? "is-in" : ""}`}>
+          <div className={`grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-4 reveal ${stats.inView ? "is-in" : ""}`}>
             {STATS.map((s) => (
               <Stat key={s.label} s={s} start={stats.inView} />
             ))}
