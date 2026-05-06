@@ -17,7 +17,7 @@ const FEATURES = [
   { icon: RefreshCw, title: "Series Fare Calendar", desc: "Browse fixed departures up to 90 days ahead and lock inventory early for group packages." },
   { icon: MessageSquare, title: "WhatsApp Updates", desc: "Itinerary, reschedules and fare alerts straight to WhatsApp." },
   { icon: LayoutDashboard, title: "Multi-Fare Choice", desc: "Compare 5 major airlines across 300+ sectors in one unified search." },
-  { icon: UserCheck, title: "Account Manager", desc: "Consistently priced below every competing series fare portal — agents save up to ₹1.5L/month." },
+  { icon: UserCheck, title: "₹300–500 Lower Per Booking", desc: "Consistently priced below every competing series fare portal — agents save up to ₹1.5L/month." },
 ];
 
 function Stat({ s, start }: { s: typeof STATS[number]; start: boolean }) {
