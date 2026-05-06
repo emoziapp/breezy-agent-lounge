@@ -13,8 +13,8 @@ const FAQS = [
     a: "Online cancellations: refund initiated instantly to your wallet. Bank transfers: 3-5 working days. Our dashboard shows the exact refund amount before you confirm — no surprises." },
   { q: "Which payment modes do you accept?",
     a: "Wallet top-up via NEFT/RTGS/IMPS, UPI, net-banking, and credit-line for verified agencies (subject to KYC and credit-team approval)." },
-  { q: "Is support available 24×7?",
-    a: "Yes. WhatsApp, phone (+91 99999 99999) and email support are live 24×7. Emergency reissue / no-show desk is staffed round the clock." },
+  { q: "Is support available ​?",
+    a: "Yes. WhatsApp, phone (+91 99999 99999) and email support are live ​. Emergency reissue / no-show desk is staffed round the clock." },
 ];
 
 export function FAQ() {

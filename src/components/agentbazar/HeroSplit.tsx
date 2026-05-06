@@ -1,11 +1,11 @@
 import { LoginCard } from "./LoginCard";
-import { ShieldCheck, Award, TrendingUp, Headphones } from "lucide-react";
+import { ShieldCheck, Award, TrendingUp, IndianRupee } from "lucide-react";
 
 const TRUST_CHIPS = [
   { icon: Award, strong: "17 Years", label: "of Excellence" },
   { icon: ShieldCheck, strong: "10K+", label: "Travel Agents" },
   { icon: TrendingUp, strong: "300+", label: "Sectors" },
-  { icon: Headphones, strong: "24×7", label: "Support" },
+  { icon: IndianRupee, strong: "​", label: "Support" },
 ];
 
 export function HeroSplit() {
