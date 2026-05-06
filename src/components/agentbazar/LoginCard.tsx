@@ -35,7 +35,7 @@ export function LoginCard() {
   };
 
   return (
-    <div className="w-full max-w-[460px] glass-card rounded-2xl p-9 sm:p-10 shadow-ab-card animate-ab-fade-up-delay">
+    <div className="w-full max-w-[460px] glass-card rounded-2xl p-9 sm:p-10 shadow-ab-card animate-ab-fade-up-delay px-[30px] py-[30px]">
       <header className="mb-7">
         <h2 className="font-display text-[26px] font-bold tracking-tight text-[var(--ab-ink)]">
           Welcome back
@@ -150,7 +150,7 @@ export function LoginCard() {
         {/* Secondary */}
         <button
           type="button"
-          className="w-full px-5 py-3 rounded-[10px] text-sm text-[var(--ab-navy)] border-[1.5px] border-neutral-200 hover:border-[var(--ab-orange)] hover:bg-orange-50/50 transition-all font-bold"
+          className="w-full px-5 py-3 rounded-[10px] border-[1.5px] border-neutral-200 hover:border-[var(--ab-orange)] hover:bg-orange-50/50 transition-all font-bold text-base"
         >
           REGISTER  A NEW AGENCY
         </button>
