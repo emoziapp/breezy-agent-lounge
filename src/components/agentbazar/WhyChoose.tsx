@@ -9,7 +9,6 @@ const STATS = [
   { value: 10000, suffix: "+", label: "Travel Agents", icon: Users, format: "k" },
   { value: 300, suffix: "+", label: "Active Sectors", icon: Globe },
   { value: 0, suffix: "₹0", label: "PAYMENT GATEWAY CHARGES", icon: Coins, isText: true },
-  { value: 24, suffix: "​", label: "Live Support", icon: IndianRupee },
 ];
 
 const FEATURES = [
