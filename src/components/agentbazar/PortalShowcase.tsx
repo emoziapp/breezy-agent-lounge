@@ -56,7 +56,7 @@ function Mock({ kind }: { kind: Feature["mock"] }) {
                   </div>
                   <div className="h-12 rounded-lg bg-orange-50 border border-orange-200 p-2">
                     <div className="text-[9px] text-neutral-500 uppercase font-bold">To</div>
-                    <div className="text-[14px] font-extrabold text-[var(--ab-navy)]">BOM</div>
+                    <div className="text-[14px] font-extrabold text-[var(--ab-navy)]">CCU</div>
                   </div>
                   <div className="h-12 rounded-lg bg-[var(--ab-orange)] grid place-items-center text-white text-[12px] font-bold">Search</div>
                 </div>

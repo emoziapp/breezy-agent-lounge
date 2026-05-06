@@ -7,7 +7,7 @@ const DEALS = [
     fare: "₹4,890", seats: 18, tag: "Diwali Special",
   },
   {
-    from: "BOM", to: "DXB", airline: "Air India AI", dates: "20 Nov → 26 Nov",
+    from: "GAU", to: "CCU", airline: "Air India AI", dates: "20 Nov → 26 Nov",
     fare: "₹14,250", seats: 9, tag: "Most Booked", featured: true,
   },
   {
@@ -22,7 +22,7 @@ export function SeriesDepartures() {
     <section
       id="flagship"
       ref={ref}
-      className="relative py-20 sm:py-28 bg-ab-soft-cream overflow-hidden"
+      className="relative py-20 bg-ab-soft-cream overflow-hidden sm:py-[100px]"
     >
       {/* Decorative blob */}
       <div className="absolute top-20 -left-32 w-[400px] h-[400px] rounded-full blur-[100px] opacity-25 bg-[var(--ab-orange)] animate-ab-blob" aria-hidden />
