@@ -62,7 +62,7 @@ export function WhyChoose() {
       <div ref={grid.ref} className="bg-ab-soft-mint py-20 sm:py-24">
         <div className="max-w-[1280px] mx-auto px-5 sm:px-8">
           <div className={`text-center max-w-[720px] mx-auto mb-14 reveal ${grid.inView ? "is-in" : ""}`}>
-            <span className="inline-block text-[11px] tracking-[0.22em] uppercase font-bold text-[var(--ab-orange)] mb-4">
+            <span className="inline-block tracking-[0.22em] uppercase font-bold mb-4 text-sm text-[#ff8b38]">
               Why AgentBazar
             </span>
             <h2 className="font-display text-[clamp(30px,4.2vw,44px)] font-extrabold tracking-tight text-[var(--ab-navy)] leading-tight mb-4">
