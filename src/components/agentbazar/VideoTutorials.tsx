@@ -42,7 +42,7 @@ export function VideoTutorials() {
     >
       <div className="max-w-[1200px] mx-auto">
         <div className="text-center mb-10">
-          <span className="inline-block text-[11px] tracking-[0.2em] uppercase font-bold text-[var(--ab-orange)] mb-3">
+          <span className="inline-block tracking-[0.2em] uppercase font-bold mb-3 text-sm text-[#ff8b38]">
             Tutorials
           </span>
           <h2 className="font-display text-[clamp(26px,3.5vw,38px)] font-extrabold text-[var(--ab-navy)] tracking-tight mb-2">

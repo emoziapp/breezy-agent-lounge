@@ -172,7 +172,7 @@ export function PortalShowcase() {
     <section id="showcase" className="py-20 sm:py-28 bg-ab-soft-peach overflow-hidden">
       <div className="max-w-[1280px] mx-auto px-5 sm:px-8">
         <div className="text-center max-w-[760px] mx-auto mb-16">
-          <span className="inline-block text-[11px] tracking-[0.22em] uppercase font-bold text-[var(--ab-orange)] mb-4">
+          <span className="inline-block tracking-[0.22em] uppercase font-bold mb-4 text-sm text-[#ff8b38]">
             Inside the Portal
           </span>
           <h2 className="font-display text-[clamp(30px,4.2vw,46px)] font-extrabold tracking-tight text-[var(--ab-navy)] leading-tight mb-4">

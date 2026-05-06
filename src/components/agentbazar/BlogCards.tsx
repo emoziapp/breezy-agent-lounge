@@ -32,7 +32,7 @@ export function BlogCards() {
       <div className="max-w-[1280px] mx-auto px-5 sm:px-8">
         <div className={`flex flex-wrap items-end justify-between gap-4 mb-12 reveal ${inView ? "is-in" : ""}`}>
           <div>
-            <span className="inline-block text-[11px] tracking-[0.22em] uppercase font-bold text-[var(--ab-orange)] mb-3">
+            <span className="inline-block tracking-[0.22em] uppercase font-bold mb-3 text-sm text-[#ff8b38]">
               From the Blog
             </span>
             <h2 className="font-display text-[clamp(28px,3.8vw,40px)] font-extrabold tracking-tight text-[var(--ab-navy)]">

@@ -47,7 +47,7 @@ export function TestimonialsCarousel() {
     <section ref={ref} className="py-20 sm:py-24 bg-white">
       <div className="max-w-[1100px] mx-auto px-5 sm:px-8">
         <div className={`text-center mb-12 reveal ${inView ? "is-in" : ""}`}>
-          <span className="inline-block text-[11px] tracking-[0.22em] uppercase font-bold text-[var(--ab-orange)] mb-3">
+          <span className="inline-block tracking-[0.22em] uppercase font-bold mb-3 text-base text-[#ff9429]">
             Loved by Agents
           </span>
           <h2 className="font-display text-[clamp(28px,3.8vw,40px)] font-extrabold tracking-tight text-[var(--ab-navy)] mb-3">
