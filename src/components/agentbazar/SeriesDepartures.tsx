@@ -3,12 +3,12 @@ import { useInView } from "@/hooks/useInView";
 
 const DEALS = [
   {
-    from: "DEL", to: "GOI", airline: "IndiGo 6E", dates: "12 Nov → 17 Nov",
-    fare: "₹4,890", seats: 18, tag: "Diwali Special",
+    from: "GAU", to: "MAA", airline: "​", dates: "01 May → 30 July",
+    fare: "₹6,600", seats: 0, tag: "Diwali Special",
   },
   {
-    from: "GAU", to: "CCU", airline: "Air India AI", dates: "20 Nov → 26 Nov",
-    fare: "₹14,250", seats: 9, tag: "Most Booked", featured: true,
+    from: "GAU", to: "CCU", airline: "Air India AI", dates: "01 May → 30 July",
+    fare: "₹6,600", seats: 9, tag: "Most Booked", featured: true,
   },
   {
     from: "BLR", to: "BKK", airline: "Thai TG", dates: "05 Dec → 10 Dec",
@@ -55,7 +55,7 @@ export function SeriesDepartures() {
               {d.featured && (
                 <div className="absolute -inset-1.5 rounded-3xl bg-gradient-to-br from-[var(--ab-orange)] to-[#ff8a3d] opacity-60 blur-xl -z-10" />
               )}
-              <article className={`tilt-card relative bg-white rounded-3xl p-6 border-2 transition-all hover:shadow-[0_24px_60px_-20px_rgba(0,29,74,0.25)] ${d.featured ? "border-[var(--ab-orange)] shadow-[0_24px_60px_-20px_rgba(255,102,0,0.4)]" : "border-neutral-100"}`}>
+              <article className={`tilt-card relative bg-white p-6 border-2 transition-all hover:shadow-[0_24px_60px_-20px_rgba(0,29,74,0.25)] ${d.featured ? "border-[var(--ab-orange)] shadow-[0_24px_60px_-20px_rgba(255,102,0,0.4)]" : "border-neutral-100"} rounded-3xl`}>
                 <div className="flex items-start justify-between mb-5">
                   <span className={`text-[10px] tracking-[0.16em] uppercase font-bold px-2.5 py-1 rounded-full ${d.featured ? "bg-[var(--ab-orange)] text-white" : "bg-orange-50 text-[var(--ab-orange)]"}`}>
                     {d.tag}
@@ -76,8 +76,10 @@ export function SeriesDepartures() {
                 <p className="text-[13px] text-neutral-500 font-medium mb-5">{d.airline}</p>
 
                 <div className="space-y-2.5 mb-6 text-[13px] text-neutral-700">
-                  <div className="flex items-center gap-2"><Calendar size={14} className="text-[var(--ab-orange)]" /> {d.dates}</div>
-                  <div className="flex items-center gap-2"><Users size={14} className="text-[var(--ab-orange)]" /> {d.seats} seats remaining</div>
+                  <div className="flex items-center gap-2 font-normal text-sm"><Calendar size={14} className="text-[var(--ab-orange)]" /> {d.dates}</div>
+                  <div className="flex items-center gap-2 font-normal text-sm">
+                    {d.seats > 0 && <><Users size={14} className="text-[var(--ab-orange)]" /> {d.seats} seats remaining</>}
+                  </div>
                 </div>
 
                 <div className="flex items-end justify-between pt-5 border-t border-dashed border-neutral-200">
@@ -85,7 +87,7 @@ export function SeriesDepartures() {
                     <span className="text-[11px] text-neutral-500 font-medium uppercase tracking-wide">Fare from</span>
                     <div className="font-display text-[24px] font-extrabold text-[var(--ab-navy)] leading-none mt-1">{d.fare}</div>
                   </div>
-                  <button className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-[var(--ab-navy)] text-white text-[13px] font-bold hover:bg-[var(--ab-orange)] transition-all hover:shadow-ab-glow group/btn">
+                  <button className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-[var(--ab-navy)] text-white text-[13px] font-bold hover:bg-[var(--ab-orange)] transition-all hover:shadow-ab-glow group/btn font-sans">
                     Block Now
                     <ArrowRight size={14} className="transition-transform group-hover/btn:translate-x-0.5" />
                   </button>
