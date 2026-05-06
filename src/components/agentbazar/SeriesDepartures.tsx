@@ -8,11 +8,11 @@ const DEALS = [
   },
   {
     from: "GAU", to: "CCU", airline: "Air India AI", dates: "01 May → 30 July",
-    fare: "₹6,600", seats: 9, tag: "Most Booked", featured: true,
+    fare: "₹6,600", seats: 0, tag: "Most Booked", featured: true,
   },
   {
-    from: "BLR", to: "BKK", airline: "Thai TG", dates: "05 Dec → 10 Dec",
-    fare: "₹17,990", seats: 24, tag: "Group Series",
+    from: "BLR", to: "BKK", airline: "Thai TG", dates: "01 May → 30 July",
+    fare: "₹17,990", seats: 0, tag: "Group Series",
   },
 ];
 
