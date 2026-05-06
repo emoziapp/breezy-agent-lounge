@@ -88,7 +88,7 @@ export function SeriesDepartures() {
                     <div className="font-display text-[24px] font-extrabold text-[var(--ab-navy)] leading-none mt-1">{d.fare}</div>
                   </div>
                   <button className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-[var(--ab-navy)] text-white text-[13px] font-bold hover:bg-[var(--ab-orange)] transition-all hover:shadow-ab-glow group/btn font-sans">
-                    Block Now
+                    Book Now
                     <ArrowRight size={14} className="transition-transform group-hover/btn:translate-x-0.5" />
                   </button>
                 </div>
