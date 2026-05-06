@@ -37,7 +37,7 @@ export function CTABanner() {
             <span>✓ No setup fee</span>
             <span>✓ Approved in 4 hours</span>
             <span>✓ Dedicated RM</span>
-            <span>✓ 24×7 support</span>
+            <span>✓ ​ support</span>
           </div>
         </div>
       </div>

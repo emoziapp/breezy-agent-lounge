@@ -49,7 +49,7 @@ export function Footer() {
             </div>
 
             <ul className="space-y-2.5 text-[13px]">
-              <li className="flex items-start gap-2.5"><Phone size={14} className="mt-0.5 text-[var(--ab-orange)]" /><a href="tel:+919435009519" className="hover:text-[var(--ab-orange)] transition-colors">+91 - 94350 - 09519 (24×7)</a></li>
+              <li className="flex items-start gap-2.5"><Phone size={14} className="mt-0.5 text-[var(--ab-orange)]" /><a href="tel:+919435009519" className="hover:text-[var(--ab-orange)] transition-colors">+91 - 94350 - 09519 (​)</a></li>
               <li className="flex items-start gap-2.5"><Mail size={14} className="mt-0.5 text-[var(--ab-orange)]" /><span>support@agentbazar.in</span></li>
               <li className="flex items-start gap-2.5"><MapPin size={14} className="mt-0.5 text-[var(--ab-orange)]" /><span>Mumbai · Delhi · Bengaluru</span></li>
             </ul>

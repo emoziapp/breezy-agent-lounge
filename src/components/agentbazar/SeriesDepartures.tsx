@@ -11,8 +11,8 @@ const DEALS = [
     fare: "₹6,600", seats: 0, tag: "Most Booked", featured: true,
   },
   {
-    from: "BLR", to: "BKK", airline: "Thai TG", dates: "01 May → 30 July",
-    fare: "₹17,990", seats: 0, tag: "Group Series",
+    from: "GAU", to: "DEL", airline: "Thai TG", dates: "01 May → 30 July",
+    fare: "₹6,600", seats: 0, tag: "Group Series",
   },
 ];
 
