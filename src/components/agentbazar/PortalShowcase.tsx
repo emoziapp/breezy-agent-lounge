@@ -52,7 +52,7 @@ function Mock({ kind }: { kind: Feature["mock"] }) {
                 <div className="grid grid-cols-3 gap-2">
                   <div className="h-12 rounded-lg bg-orange-50 border border-orange-200 p-2">
                     <div className="text-[9px] text-neutral-500 uppercase font-bold">From</div>
-                    <div className="text-[14px] font-extrabold text-[var(--ab-navy)]">DEL</div>
+                    <div className="text-[14px] font-extrabold text-[var(--ab-navy)]">GAU</div>
                   </div>
                   <div className="h-12 rounded-lg bg-orange-50 border border-orange-200 p-2">
                     <div className="text-[9px] text-neutral-500 uppercase font-bold">To</div>
@@ -82,7 +82,7 @@ function Mock({ kind }: { kind: Feature["mock"] }) {
                 </div>
                 {[
                   { l: "Passenger", v: "Mr. Rahul Sharma" },
-                  { l: "Flight", v: "6E-2034 · DEL→BOM" },
+                  { l: "Flight", v: "6E-2034 · GAU→BOM" },
                   { l: "Date", v: "12 Nov 2026" },
                   { l: "Fare", v: "₹4,890" },
                   { l: "Commission", v: "₹245" },
