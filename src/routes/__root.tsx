@@ -37,6 +37,10 @@ export const Route = createRootRoute({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "AgentBazar.in" },
+      { name: "twitter:description", content: "B2B Airfare Marketplace for Travel Agents" },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/228a0f0a-0039-4e24-a211-c788f8d65443/id-preview-a25fb5cc--149aa0b4-070f-4c29-93a8-bd41a85e232f.lovable.app-1778053777945.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/228a0f0a-0039-4e24-a211-c788f8d65443/id-preview-a25fb5cc--149aa0b4-070f-4c29-93a8-bd41a85e232f.lovable.app-1778053777945.png" },
     ],
     links: [
       {
