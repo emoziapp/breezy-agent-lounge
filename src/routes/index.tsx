@@ -8,7 +8,7 @@ import { PortalShowcase } from "@/components/agentbazar/PortalShowcase";
 import { VideoTutorials } from "@/components/agentbazar/VideoTutorials";
 import { TestimonialsCarousel } from "@/components/agentbazar/TestimonialsCarousel";
 import { BlogCards } from "@/components/agentbazar/BlogCards";
-import { NewsStrip } from "@/components/agentbazar/NewsStrip";
+
 import { FAQ } from "@/components/agentbazar/FAQ";
 import { CTABanner } from "@/components/agentbazar/CTABanner";
 import { Footer } from "@/components/agentbazar/Footer";
@@ -45,7 +45,7 @@ function Index() {
       <VideoTutorials />
       <TestimonialsCarousel />
       <BlogCards />
-      <NewsStrip />
+      
       <FAQ />
       <CTABanner />
       <Footer />
