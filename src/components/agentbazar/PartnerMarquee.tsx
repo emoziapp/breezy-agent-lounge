@@ -1,5 +1,19 @@
+import indigo from "@/assets/airlines/indigo.jpg";
+import airIndia from "@/assets/airlines/air-india.jpg";
+import airIndiaExpress from "@/assets/airlines/air-india-express.jpg";
+import akasa from "@/assets/airlines/akasa-air.jpg";
+import spicejet from "@/assets/airlines/spicejet.jpg";
+import airasia from "@/assets/airlines/airasia.jpg";
+import flydubai from "@/assets/airlines/flydubai.jpg";
+
 const AIRLINES = [
-  "IndiGo", "Air India", "Air India Express", "Akasa Air", "SpiceJet", "AirAsia", "Fly Dubai",
+  { name: "IndiGo", logo: indigo },
+  { name: "Air India", logo: airIndia },
+  { name: "Air India Express", logo: airIndiaExpress },
+  { name: "Akasa Air", logo: akasa },
+  { name: "SpiceJet", logo: spicejet },
+  { name: "AirAsia", logo: airasia },
+  { name: "Fly Dubai", logo: flydubai },
 ];
 
 export function PartnerMarquee() {
@@ -23,11 +37,16 @@ export function PartnerMarquee() {
               key={i}
               className="mx-6 sm:mx-8 flex items-center gap-2.5 text-[var(--ab-navy)]/75 hover:text-[var(--ab-orange)] transition-colors"
             >
-              <span className="inline-grid place-items-center w-9 h-9 rounded-lg bg-gradient-to-br from-neutral-100 to-neutral-200 text-[var(--ab-navy)] font-extrabold text-[13px]">
-                {a.split(" ").map(w => w[0]).slice(0, 2).join("")}
+              <span className="inline-grid place-items-center w-9 h-9 rounded-lg bg-white border border-neutral-200 overflow-hidden p-1">
+                <img
+                  src={a.logo}
+                  alt={`${a.name} logo`}
+                  className="max-w-full max-h-full object-contain"
+                  loading="lazy"
+                />
               </span>
               <span className="font-display font-bold text-[15px] sm:text-[17px] tracking-tight whitespace-nowrap">
-                {a}
+                {a.name}
               </span>
             </div>
           ))}
