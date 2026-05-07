@@ -45,7 +45,7 @@ function Index() {
       <VideoTutorials />
       <TestimonialsCarousel />
       <BlogCards />
-      <NewsStrip />
+      
       <FAQ />
       <CTABanner />
       <Footer />
