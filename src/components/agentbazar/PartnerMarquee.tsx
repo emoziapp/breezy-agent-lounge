@@ -31,23 +31,18 @@ export function PartnerMarquee() {
         className="relative group"
         style={{ maskImage: "linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent)", WebkitMaskImage: "linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent)" }}
       >
-        <div className="flex w-max animate-ab-marquee group-hover:[animation-play-state:paused]">
+        <div className="flex w-max items-center animate-ab-marquee group-hover:[animation-play-state:paused]">
           {items.map((a, i) => (
             <div
               key={i}
-              className="mx-6 sm:mx-8 flex items-center gap-2.5 text-[var(--ab-navy)]/75 hover:text-[var(--ab-orange)] transition-colors"
+              className="mx-10 sm:mx-14 flex items-center justify-center grayscale hover:grayscale-0 opacity-80 hover:opacity-100 transition-all duration-300"
             >
-              <span className="inline-grid place-items-center w-9 h-9 rounded-lg bg-white border border-neutral-200 overflow-hidden p-1">
-                <img
-                  src={a.logo}
-                  alt={`${a.name} logo`}
-                  className="max-w-full max-h-full object-contain"
-                  loading="lazy"
-                />
-              </span>
-              <span className="font-display font-bold text-[15px] sm:text-[17px] tracking-tight whitespace-nowrap">
-                {a.name}
-              </span>
+              <img
+                src={a.logo}
+                alt={`${a.name} logo`}
+                className="h-12 sm:h-14 w-auto object-contain"
+                loading="lazy"
+              />
             </div>
           ))}
         </div>
