@@ -3,7 +3,7 @@ import { Play, X } from "lucide-react";
 
 const VIDEOS = [
   {
-    id: "ILJbZDlJNRY",
+    id: "e_lzR30amr4",
     title: "How to login & dashboard overview",
     desc: "Get started with AgentBazar in 2 minutes",
   },
@@ -13,7 +13,7 @@ const VIDEOS = [
     desc: "Find the best fares across 300+ sectors",
   },
   {
-    id: "ILJbZDlJNRY",
+    id: "aGoClooGXYg",
     title: "Group fare booking tutorial",
     desc: "Book series and group tickets with ease",
   },
