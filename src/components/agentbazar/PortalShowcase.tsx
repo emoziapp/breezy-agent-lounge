@@ -25,14 +25,6 @@ const FEATURES: Feature[] = [
     image: fareHunting,
   },
   {
-    icon: CalendarDays,
-    eyebrow: "Plan Smarter",
-    title: "Track live series fares across the month and book the best available departures instantly",
-    desc: "View fixed fare availability date-wise across multiple sectors in a single calendar view. Quickly identify the lowest fares, upcoming departures, and active series routes without performing repeated searches.",
-    bullets: ["Date-wise fare availability", "Lowest fares at a glance", "No repeated searches"],
-    image: seriesCalendar,
-  },
-  {
     icon: Headphones,
     eyebrow: "Fast & Hassle-Free",
     title: "Service requests handled with faster processing and real-time tracking",
