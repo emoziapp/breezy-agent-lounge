@@ -4,7 +4,7 @@ import { Play, X } from "lucide-react";
 const VIDEOS = [
   {
     id: "e_lzR30amr4",
-    title: "How to login & dashboard overview",
+    title: "How to Register your Agency",
     desc: "Get started with AgentBazar in 2 minutes",
   },
   {
