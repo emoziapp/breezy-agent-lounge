@@ -14,7 +14,7 @@ const VIDEOS = [
   },
   {
     id: "aGoClooGXYg",
-    title: "Group fare booking tutorial",
+    title: "Book a series/fixed departure",
     desc: "Book series and group tickets with ease",
   },
 ];
