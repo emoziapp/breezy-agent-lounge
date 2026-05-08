@@ -35,7 +35,7 @@ export function PartnerMarquee() {
           {items.map((a, i) => (
             <div
               key={i}
-              className="mx-10 sm:mx-14 flex items-center justify-center grayscale hover:grayscale-0 opacity-80 hover:opacity-100 transition-all duration-300"
+              className="mx-10 sm:mx-14 flex items-center justify-center transition-transform duration-300 hover:scale-105"
             >
               <img
                 src={a.logo}
