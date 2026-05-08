@@ -1,9 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { useInView } from "@/hooks/useInView";
-import { MousePointerClick, CalendarDays, Headphones, LayoutDashboard, Check, ChevronLeft, ChevronRight } from "lucide-react";
+import { MousePointerClick, Headphones, LayoutDashboard, Check, ChevronLeft, ChevronRight } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import fareHunting from "@/assets/portal/fare-hunting.jpg";
-import seriesCalendar from "@/assets/portal/series-calendar.jpg";
 import serviceRequest from "@/assets/portal/service-request.jpg";
 import dashboard from "@/assets/portal/dashboard.jpg";
 
