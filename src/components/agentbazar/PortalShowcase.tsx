@@ -1,9 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { useInView } from "@/hooks/useInView";
-import { MousePointerClick, CalendarDays, Headphones, LayoutDashboard, Check, ChevronLeft, ChevronRight } from "lucide-react";
+import { MousePointerClick, Headphones, LayoutDashboard, Check, ChevronLeft, ChevronRight } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import fareHunting from "@/assets/portal/fare-hunting.jpg";
-import seriesCalendar from "@/assets/portal/series-calendar.jpg";
 import serviceRequest from "@/assets/portal/service-request.jpg";
 import dashboard from "@/assets/portal/dashboard.jpg";
 
@@ -24,14 +23,6 @@ const FEATURES: Feature[] = [
     desc: "Skip manual fare searching and save valuable booking time. Simply click on any visible sector to instantly check live availability, view fixed fares, and issue tickets with immediate PNR confirmation — all from a single streamlined dashboard.",
     bullets: ["One-click sector selection", "Instant PNR confirmation", "Single streamlined dashboard"],
     image: fareHunting,
-  },
-  {
-    icon: CalendarDays,
-    eyebrow: "Plan Smarter",
-    title: "Track live series fares across the month and book the best available departures instantly",
-    desc: "View fixed fare availability date-wise across multiple sectors in a single calendar view. Quickly identify the lowest fares, upcoming departures, and active series routes without performing repeated searches.",
-    bullets: ["Date-wise fare availability", "Lowest fares at a glance", "No repeated searches"],
-    image: seriesCalendar,
   },
   {
     icon: Headphones,
@@ -63,7 +54,7 @@ function Slide({ f }: { f: Feature }) {
               <span className="w-2 h-2 rounded-full bg-yellow-400" />
               <span className="w-2 h-2 rounded-full bg-green-400" />
             </div>
-            <img src={f.image} alt={f.eyebrow} className="block w-full h-auto" loading="lazy" />
+            <img src={f.image} alt={f.eyebrow} className="block w-full aspect-[3/2] object-cover" loading="lazy" />
           </div>
         </div>
         <div className="absolute -bottom-4 -right-4 px-3 py-2 rounded-full bg-[var(--ab-navy)] text-white text-[11px] font-bold shadow-xl animate-ab-float">
