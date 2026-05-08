@@ -54,7 +54,7 @@ function Slide({ f }: { f: Feature }) {
               <span className="w-2 h-2 rounded-full bg-yellow-400" />
               <span className="w-2 h-2 rounded-full bg-green-400" />
             </div>
-            <img src={f.image} alt={f.eyebrow} className="block w-full h-auto" loading="lazy" />
+            <img src={f.image} alt={f.eyebrow} className="block w-full aspect-[3/2] object-cover" loading="lazy" />
           </div>
         </div>
         <div className="absolute -bottom-4 -right-4 px-3 py-2 rounded-full bg-[var(--ab-navy)] text-white text-[11px] font-bold shadow-xl animate-ab-float">
