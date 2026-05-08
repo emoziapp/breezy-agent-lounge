@@ -41,12 +41,18 @@ export function TopBar() {
             <a href="#faq" className="hover:text-[var(--ab-orange)] transition-colors">FAQ</a>
           </nav>
           <div className="flex items-center gap-2.5">
-            <button className="hidden sm:inline-flex items-center gap-1.5 text-[13px] font-bold text-[var(--ab-navy)] px-3.5 py-2 rounded-full border border-neutral-200 hover:border-[var(--ab-orange)] hover:text-[var(--ab-orange)] transition-all">
+            <button
+              onClick={() => window.dispatchEvent(new CustomEvent("ab:open-register"))}
+              className="hidden sm:inline-flex items-center gap-1.5 text-[13px] font-bold text-[var(--ab-navy)] px-3.5 py-2 rounded-full border border-neutral-200 hover:border-[var(--ab-orange)] hover:text-[var(--ab-orange)] transition-all"
+            >
               <UserPlus size={14} />Register
             </button>
-            <a href="#login" className="inline-flex items-center gap-1.5 text-[13px] font-bold text-white px-4 py-2 rounded-full bg-gradient-to-br from-[var(--ab-orange)] to-[var(--ab-orange-dark)] shadow-ab-glow hover:shadow-ab-glow-lg hover:-translate-y-px transition-all">
+            <button
+              onClick={() => window.dispatchEvent(new CustomEvent("ab:open-signin"))}
+              className="inline-flex items-center gap-1.5 text-[13px] font-bold text-white px-4 py-2 rounded-full bg-gradient-to-br from-[var(--ab-orange)] to-[var(--ab-orange-dark)] shadow-ab-glow hover:shadow-ab-glow-lg hover:-translate-y-px transition-all"
+            >
               <LogIn size={14} /> Sign In
-            </a>
+            </button>
           </div>
         </div>
       </div>

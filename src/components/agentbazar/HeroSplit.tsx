@@ -2,9 +2,10 @@
 // HeroSplit.tsx — updated to wire RegistrationModal
 
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { LoginCard } from "./LoginCard";
 import { RegistrationModal } from "./RegistrationModal";
+import { SignInModal } from "./SignInModal";
 import { ShieldCheck, Award, TrendingUp, IndianRupee } from "lucide-react";
 
 const TRUST_CHIPS = [
@@ -16,6 +17,18 @@ const TRUST_CHIPS = [
 
 export function HeroSplit() {
   const [showRegister, setShowRegister] = useState(false);
+  const [showSignIn, setShowSignIn] = useState(false);
+
+  useEffect(() => {
+    const openReg = () => setShowRegister(true);
+    const openSignIn = () => setShowSignIn(true);
+    window.addEventListener("ab:open-register", openReg);
+    window.addEventListener("ab:open-signin", openSignIn);
+    return () => {
+      window.removeEventListener("ab:open-register", openReg);
+      window.removeEventListener("ab:open-signin", openSignIn);
+    };
+  }, []);
 
   return (
     <>
@@ -137,6 +150,11 @@ export function HeroSplit() {
       <RegistrationModal
         open={showRegister}
         onClose={() => setShowRegister(false)}
+      />
+      <SignInModal
+        open={showSignIn}
+        onClose={() => setShowSignIn(false)}
+        onRegisterClick={() => setShowRegister(true)}
       />
     </>
   );
