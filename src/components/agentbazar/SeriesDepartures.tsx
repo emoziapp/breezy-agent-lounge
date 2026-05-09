@@ -99,7 +99,7 @@ export function SeriesDepartures() {
 
         <div className={`text-center mt-10 reveal reveal-delay-4 ${inView ? "is-in" : ""}`}>
           <a href="#" className="inline-flex items-center gap-2 text-[var(--ab-navy)] font-bold text-[15px] hover:text-[var(--ab-orange)] transition-colors">
-            Browse all 80+ live series departures <ArrowRight size={16} />
+            Browse all 300+ live series departures <ArrowRight size={16} />
           </a>
         </div>
       </div>
