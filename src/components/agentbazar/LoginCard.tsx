@@ -306,7 +306,7 @@ export function LoginCard({ onRegisterClick }: LoginCardProps) {
         <button
           type="button"
           onClick={onRegisterClick}
-          className="w-full px-5 py-3 rounded-[10px] border-[1.5px] border-neutral-200 hover:border-[var(--ab-orange)] transition-all font-bold text-base bg-[#004bad] text-white"
+          className="w-full px-5 py-3 rounded-[10px] border-[1.5px] border-neutral-200 hover:border-[var(--ab-orange)] transition-all font-bold text-base bg-[#004bad] text-white opacity-70"
         >
           REGISTER A NEW AGENCY
         </button>
