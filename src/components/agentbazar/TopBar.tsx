@@ -1,4 +1,5 @@
 import { Phone, Mail, Globe2, UserPlus, LogIn } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 export function TopBar() {
   return (
@@ -29,9 +30,8 @@ export function TopBar() {
       {/* Nav row */}
       <div className="bg-white/95 backdrop-blur-md border-b border-neutral-200/80">
         <div className="max-w-[1280px] mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
-          <a href="#" className="font-display text-[22px] font-extrabold tracking-tight text-[var(--ab-navy)]">
-            agent<span className="text-[var(--ab-orange)]">Bazar</span>
-            <span className="text-[var(--ab-navy)]">.in</span>
+          <a href="#" className="flex items-center" aria-label="AgentBazar.in">
+            <img src={logo} alt="AgentBazar.in" className="h-12 w-auto" />
           </a>
           <nav className="hidden lg:flex items-center gap-8 text-[14px] font-semibold text-neutral-700">
             <a href="#flagship" className="hover:text-[var(--ab-orange)] transition-colors">Series Departures</a>
