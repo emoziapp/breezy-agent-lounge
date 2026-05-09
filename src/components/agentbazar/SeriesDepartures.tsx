@@ -4,15 +4,15 @@ import { useInView } from "@/hooks/useInView";
 const DEALS = [
   {
     from: "GAU", to: "MAA", airline: "​", dates: "01 May → 30 July",
-    fare: "₹6,500", seats: 0, tag: "Diwali Special",
+    fare: <div className="leading-tight text-[18px]">0%<br />Gateway Charges</div>, seats: 0, tag: "Diwali Special",
   },
   {
     from: "GAU", to: "CCU", airline: "Air India AI", dates: "01 May → 30 July",
-    fare: "₹6,500", seats: 0, tag: "Most Booked", featured: true,
+    fare: <div className="leading-tight text-[18px]">0%<br />Gateway Charges</div>, seats: 0, tag: "Most Booked", featured: true,
   },
   {
     from: "GAU", to: "DEL", airline: "Thai TG", dates: "01 May → 30 July",
-    fare: "₹6,500", seats: 0, tag: "Group Series",
+    fare: <div className="leading-tight text-[18px]">0%<br />Gateway Charges</div>, seats: 0, tag: "Group Series",
   },
 ];
 
