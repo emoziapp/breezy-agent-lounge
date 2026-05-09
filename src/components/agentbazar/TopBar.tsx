@@ -31,7 +31,7 @@ export function TopBar() {
       <div className="bg-white/95 backdrop-blur-md border-b border-neutral-200/80">
         <div className="max-w-[1280px] mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
           <a href="#" className="flex items-center" aria-label="AgentBazar.in">
-            <img src={logo} alt="AgentBazar.in" className="h-12 w-auto" />
+            <img src={logo} alt="AgentBazar.in" className="h-20 w-auto -my-4" />
           </a>
           <nav className="hidden lg:flex items-center gap-8 text-[14px] font-semibold text-neutral-700">
             <a href="#flagship" className="hover:text-[var(--ab-orange)] transition-colors">Series Departures</a>
