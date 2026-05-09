@@ -12,7 +12,7 @@ const TRUST_CHIPS = [
   { icon: Award, strong: "17 Years", label: "of Excellence" },
   { icon: ShieldCheck, strong: "10K+", label: "Travel Agents" },
   { icon: TrendingUp, strong: "300+", label: "Sectors" },
-  { icon: IndianRupee, strong: "​", label: "Support" },
+  { icon: IndianRupee, strong: "​", label: "6E, IX, QP" },
 ];
 
 export function HeroSplit() {
