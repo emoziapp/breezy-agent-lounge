@@ -209,7 +209,7 @@ export function LoginCard({ onRegisterClick }: LoginCardProps) {
         {/* Email / Mobile */}
         <div className="mb-4">
           <label className="block text-[13px] font-semibold text-neutral-700 mb-2">
-            Email or mobile
+            Email or Mobile
           </label>
           <input
             ref={emailRef}
