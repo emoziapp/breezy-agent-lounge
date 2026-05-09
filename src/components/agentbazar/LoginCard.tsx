@@ -244,9 +244,9 @@ export function LoginCard({ onRegisterClick }: LoginCardProps) {
             <button
               type="button"
               onClick={() => setView("forgot")}
-              className="text-xs font-semibold text-[var(--ab-orange)] hover:underline text-right leading-tight"
+              className="text-xs font-semibold text-[var(--ab-orange)] hover:underline"
             >
-              0%<br />Gateway Charges
+              Forgot?
             </button>
           </div>
           <div className="relative">
