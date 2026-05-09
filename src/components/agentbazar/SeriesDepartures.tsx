@@ -85,7 +85,7 @@ export function SeriesDepartures() {
                 <div className="flex items-end justify-between pt-5 border-t border-dashed border-neutral-200">
                   <div>
                     <span className="text-[11px] text-neutral-500 font-medium uppercase tracking-wide">Fare from</span>
-                    <div className="font-display text-[24px] font-extrabold text-[var(--ab-navy)] leading-none mt-1">{d.fare}</div>
+                    <div className="font-display font-extrabold text-[var(--ab-navy)] mt-1">{d.fare}</div>
                   </div>
                   <button className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-[var(--ab-navy)] text-white text-[13px] font-bold hover:bg-[var(--ab-orange)] transition-all hover:shadow-ab-glow group/btn font-sans">
                     Book Now
