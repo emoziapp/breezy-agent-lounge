@@ -8,7 +8,7 @@ const STATS = [
   { value: 17, suffix: "", label: "Years of Excellence", icon: Award },
   { value: 10000, suffix: "+", label: "Travel Agents", icon: Users, format: "k" },
   { value: 300, suffix: "+", label: "Active Sectors", icon: Globe },
-  { value: 0, suffix: "₹0", label: "PAYMENT GATEWAY CHARGES", icon: Coins, isText: true },
+  { value: 0, suffix: "₹0*", label: "PAYMENT GATEWAY CHARGES", icon: Coins, isText: true },
 ];
 
 const FEATURES = [
